@@ -41,7 +41,7 @@ public class CustomGrid extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Checkable l;
+
         View grid;
         LayoutInflater inflater = (LayoutInflater) mContext
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -50,21 +50,12 @@ public class CustomGrid extends BaseAdapter {
 
             grid = new View(mContext);
             grid = inflater.inflate(R.layout.grid_single, null);
-           // TextView textView = (TextView) grid.findViewById(R.id.grid_text);
             ImageView imageView = (ImageView)grid.findViewById(R.id.grid_image);
-          //  textView.setText(web[position]);
             imageView.setImageResource(Imageid.get(position));
         } else {
             grid = (View) convertView;
         }
 
         return grid;
-    }public void iter(){
-
-
-
-
     }
-
-
 }
